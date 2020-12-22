@@ -39,7 +39,7 @@ BuildRequires:  pkgconfig(mutter-cogl-7)
 BuildRequires:  pkgconfig(mutter-cogl-pango-7)
 BuildRequires:  pkgconfig(plank) >= 0.11.0
 
-Requires:       %{name}-libs%{?_isa} = %{version}-%{release}
+Requires:	%{libname} = %{version}-%{release}
 
 # gala provides a generic icon (apps/multitasking-view)
 Requires:       hicolor-icon-theme

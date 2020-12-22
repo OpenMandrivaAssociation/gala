@@ -84,17 +84,6 @@ This package contains the development headers.
 %find_lang gala
 
 
-%check
-desktop-file-validate \
-    %{buildroot}/%{_sysconfdir}/xdg/autostart/gala-daemon.desktop
-
-desktop-file-validate \
-    %{buildroot}/%{_datadir}/applications/gala*.desktop
-
-appstream-util validate-relax --nonet \
-    %{buildroot}/%{_datadir}/metainfo/%{name}.appdata.xml
-
-
 %files -f gala.lang
 %doc AUTHORS README.md
 %license COPYING

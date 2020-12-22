@@ -50,10 +50,8 @@ Requires:       dbus-tools
 # gala relies on the new notification server
 Requires:       elementary-notifications
 
-
 %description
 Gala is Pantheon's Window Manager, part of the elementary project.
-
 
 %package -n %{libname}
 Summary:        Gala window manager libraries
@@ -66,7 +64,6 @@ This package contains the shared libraries.
 
 %package -n %{devname}
 Summary:        Gala window manager development files
-Requires:       %{name}-libs%{?_isa} = %{version}-%{release}
 Requires:	%{libname} = %{version}-%{release}
 
 %description -n %{devname}
@@ -93,14 +90,10 @@ This package contains the development headers.
 %files -f gala.lang
 %doc AUTHORS README.md
 %license COPYING
-
 %config(noreplace) %{_sysconfdir}/xdg/autostart/gala-daemon.desktop
-
 %{_bindir}/gala
 %{_bindir}/gala-daemon
-
 %{_libdir}/gala/plugins/*
-
 %{_datadir}/applications/gala*.desktop
 %{_datadir}/glib-2.0/schemas/20_elementary.pantheon.wm.gschema.override
 %{_datadir}/glib-2.0/schemas/org.pantheon.desktop.gala.gschema.xml
@@ -110,20 +103,15 @@ This package contains the development headers.
 %files -n %{libname}
 %doc AUTHORS README.md
 %license COPYING
-
 %dir %{_libdir}/gala
 %dir %{_libdir}/gala/plugins
-
 %{_libdir}/libgala.so.%{major}*
 
-%package -n %{devname}
+%files -n %{devname}
 %doc AUTHORS README.md
 %license COPYING
-
 %{_includedir}/gala/
-
 %{_libdir}/libgala.so
 %{_libdir}/pkgconfig/gala.pc
-
 %{_datadir}/vala/vapi/gala.deps
 %{_datadir}/vala/vapi/gala.vapi

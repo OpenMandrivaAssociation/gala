@@ -1,3 +1,8 @@
+
+%define major 0
+%define libname %mklibname gala %{major}
+%define devname %mklibname -d gala
+
 %global __provides_exclude_from ^%{_libdir}/gala/.*\\.so$
 
 %global commitdate  20201219
@@ -50,20 +55,21 @@ Requires:       elementary-notifications
 Gala is Pantheon's Window Manager, part of the elementary project.
 
 
-%package        libs
+%package -n %{libname}
 Summary:        Gala window manager libraries
 
-%description    libs
+%description -n %{libname}
 Gala is Pantheon's Window Manager, part of the elementary project.
 
 This package contains the shared libraries.
 
 
-%package        devel
+%package -n %{devname}
 Summary:        Gala window manager development files
 Requires:       %{name}-libs%{?_isa} = %{version}-%{release}
+Requires:	%{libname} = %{version}-%{release}
 
-%description    devel
+%description -n %{devname}
 Gala is Pantheon's Window Manager, part of the elementary project.
 
 This package contains the development headers.
@@ -101,17 +107,16 @@ This package contains the development headers.
 %{_datadir}/icons/hicolor/*/apps/multitasking-view.svg
 %{_datadir}/metainfo/%{name}.appdata.xml
 
-%files libs
+%files -n %{libname}
 %doc AUTHORS README.md
 %license COPYING
 
 %dir %{_libdir}/gala
 %dir %{_libdir}/gala/plugins
 
-%{_libdir}/libgala.so.0*
+%{_libdir}/libgala.so.%{major}*
 
-
-%files devel
+%package -n %{devname}
 %doc AUTHORS README.md
 %license COPYING
 

@@ -34,9 +34,9 @@ BuildRequires:  pkgconfig(granite) >= 5.3.0
 BuildRequires:  pkgconfig(gtk+-3.0)
 BuildRequires:  pkgconfig(libbamf3)
 BuildRequires:  pkgconfig(libcanberra)
-BuildRequires:  pkgconfig(mutter-clutter-7)
-BuildRequires:  pkgconfig(mutter-cogl-7)
-BuildRequires:  pkgconfig(mutter-cogl-pango-7)
+BuildRequires:  pkgconfig(mutter-clutter-8)
+BuildRequires:  pkgconfig(mutter-cogl-8)
+BuildRequires:  pkgconfig(mutter-cogl-pango-8)
 BuildRequires:  pkgconfig(plank) >= 0.11.0
 
 Requires:	%{libname} = %{version}-%{release}

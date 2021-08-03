@@ -15,6 +15,9 @@ License:        GPLv3+
 URL:            https://github.com/elementary/gala
 Source0:        https://github.com/elementary/gala/archive/%{name}/%{name}-%{version}.tar.gz
 
+# Upstream, pull for support new mutter 40.
+Patch0:         https://patch-diff.githubusercontent.com/raw/elementary/gala/pull/980.patch
+
 #use git to pull support for mutter-7/gnome3.38
 
 
@@ -72,21 +75,17 @@ Gala is Pantheon's Window Manager, part of the elementary project.
 
 This package contains the development headers.
 
-
 %prep
 %autosetup -n %{name}-%{version} -p1
-
 
 %build
 %meson
 %meson_build
 
-
 %install
 %meson_install
 
 %find_lang gala
-
 
 %files -f gala.lang
 %doc AUTHORS README.md

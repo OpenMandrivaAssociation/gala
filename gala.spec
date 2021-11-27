@@ -93,6 +93,9 @@ This package contains the development headers.
 %{_datadir}/glib-2.0/schemas/org.pantheon.desktop.gala.gschema.xml
 %{_datadir}/icons/hicolor/*/apps/multitasking-view.svg
 %{_datadir}/metainfo/%{name}.appdata.xml
+/usr/lib/systemd/user/gala-x11.service
+/usr/lib/systemd/user/gala-x11.target
+
 
 %files -n %{libname}
 %doc AUTHORS README.md

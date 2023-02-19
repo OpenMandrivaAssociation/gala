@@ -21,6 +21,7 @@ BuildRequires:  pkgconfig(appstream-glib)
 BuildRequires:  meson >= 0.48.0
 BuildRequires:  vala >= 0.28.0
 BuildRequires:  egl-devel
+BuildRequires:  granite
 BuildRequires:  pkgconfig(clutter-1.0) >= 1.12.0
 BuildRequires:  pkgconfig(clutter-gtk-1.0)
 BuildRequires:  pkgconfig(gee-0.8)

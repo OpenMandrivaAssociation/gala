@@ -28,7 +28,7 @@ BuildRequires:  pkgconfig(gexiv2)
 BuildRequires:  pkgconfig(glib-2.0) >= 2.44.0
 BuildRequires:  pkgconfig(gnome-desktop-3.0)
 BuildRequires:  pkgconfig(gnome-settings-daemon) >= 3.15.2
-BuildRequires:  pkgconfig(granite) >= 5.3.0
+BuildRequires:  pkgconfig(granite-7)
 BuildRequires:  pkgconfig(gtk+-3.0)
 BuildRequires:  pkgconfig(libbamf3)
 BuildRequires:  pkgconfig(libcanberra)
